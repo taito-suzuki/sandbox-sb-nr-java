@@ -149,9 +149,9 @@ class HelloController {
         // Job3のrun関数に付与されているアノテーションを
         // Trace(async = true)にしなければならない。
         List<Thread> threads = List.of(
-                new Thread(new Job3(1000L, token), "job1"),
-                new Thread(new Job3(2000L, token), "job2"),
-                new Thread(new Job3(1000L, token), "job3")
+                new Thread(new Job3(1000L, token), "job1-thread"),
+                new Thread(new Job3(2000L, token), "job2-thread"),
+                new Thread(new Job3(1000L, token), "job3-thread")
         );
         for (Thread t : threads) {
             t.start();
