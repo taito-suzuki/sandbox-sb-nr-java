@@ -84,9 +84,9 @@ class HelloController {
         // とのことらしいが、正直何を言ってるのかよく分からん。
 
         List<Thread> threads = List.of(
-                new Thread(new Job(1000L), "job1"),
-                new Thread(new Job(2000L), "job2"),
-                new Thread(new Job(1000L), "job3")
+                new Thread(new Job(1000L), "job1-thread"),
+                new Thread(new Job(2000L), "job2-thread"),
+                new Thread(new Job(1000L), "job3-thread")
         );
         for (Thread t : threads) {
             t.start();
@@ -117,9 +117,9 @@ class HelloController {
         // Traceだから。
 
         List<Thread> threads = List.of(
-                new Thread(new Job2(1000L, token), "job1"),
-                new Thread(new Job2(2000L, token), "job2"),
-                new Thread(new Job2(1000L, token), "job3")
+                new Thread(new Job2(1000L, token), "job1-thread"),
+                new Thread(new Job2(2000L, token), "job2-thread"),
+                new Thread(new Job2(1000L, token), "job3-thread")
         );
         for (Thread t : threads) {
             t.start();
